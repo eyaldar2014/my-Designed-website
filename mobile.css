@@ -1,0 +1,165 @@
+/* PORTAL */
+
+
+#portal .portal-container h1{
+  font-family: portal;
+  font-size: 8.5rem;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+  /* navbar */
+
+  .navbar-logo:before{
+
+    width: 200px;
+    height: 400px;
+
+  }
+
+  .navbar h3{
+    font-family: portal2;
+    font-size: 1.5rem;
+    grid-column: 4 /span 8;
+  }
+
+  .navbar ul{
+    grid-column: 12 /span 5;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 1rem;
+    font-family: portal2;
+  }
+
+  .current{
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  @keyframes swimming{
+    50% {
+      transform: translateY(1500%)
+    }
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+  #music .main-container-music .quote-1{
+    font-size: 1.6rem;
+  }
+
+  #music .main-container-music .quote-2{
+    top: 25vh;
+    left: 15vw;
+    font-size: 2rem;
+  }
+
+
+  /* ------------------------------------------------------------------------------------------------------------------------------------ */
+  
+  
+  #ranch .ranch-bg{
+    background: url(/images/ranch/horses/how-to-draw-a-horse-head-4.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 40%;
+  }
+  
+  .item-14:before{
+    left: 0;
+    width: 100%;
+  }
+
+  .item-13:before{
+    top: calc(-65vh + 100px);
+    height: calc(40vh - 100px);
+  }
+
+  .item-12:before{
+    top: calc(-65vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(40vh - 100px);
+  }
+
+  .item-11:before{
+    top: calc(-58vh + 100px);
+    left: 0;
+    width: 100%;
+    height: 20vh;
+  }
+
+  .item-10:before{
+    top: calc(-59vh + 100px);
+    left: 0;
+    width: 100%;
+    height: 24vh;
+  }
+
+  .item-9:before{
+    top: calc(-59vh + 100px);
+    height: 24vh;
+  }
+
+  .item-7:before{
+    top: calc(-59vh + 100px);
+    height: 24vh;
+  }
+
+  .item-6:before{
+    top: calc(-68vh + 100px);
+    height: calc(48vh - 100px);
+  }
+
+  .item-5:before{
+    top: calc(-59vh + 100px);
+
+    height: 24vh;
+  }
+
+  .item-4:before{
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+
+  .item-3:before{
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+
+  .item-2:before{
+    top: calc(-59vh + 100px);
+    width: 100%;
+    height: 24vh;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------------------ */
+  #relax{
+    height: 100vh;
+    background: black;
+    position: relative;
+  }
+  .relax{
+    height: 100vh;
+    background: url(/images/464.jpg)no-repeat center center;
+    animation: bg 60s linear infinite;
+  }
+
+@keyframes bg {
+  10%{ background: url(/images/world/earth/2czdk0000f41000.jpeg)no-repeat center center;}
+  20%{ background: url(/images/world/earth/africa.jpg)no-repeat center center;}
+  30%{ background: url(/images/world/earth/DF-Promo_View.jpg8843d058-7403-4cd7-a1a7-a127c31d0bb2Original.jpg)no-repeat center center;}
+  40%{ background: url(/images/world/earth/file-20191218-11891-rdedzs.jpg.webp)no-repeat center center;}
+  50%{ background: url(/images/world/earth/GettyImages-966223936-1651cc0ded784ff2bac31e1c8f835a6f.jpg)no-repeat center center;}
+  60%{ background: url(/images/1.jpg)no-repeat center center;}
+  70%{ background: url(/images/world/earth/New-global-view.max-1000x1000.jpeg.png)no-repeat center center;}
+  80%{ background: url(/images/world/earth/satellite-map-of-the-world_wm00875.jpg)no-repeat center center;}
+  90%{ background: url(/images/world/earth/Science_nightsky_462555821.jpg.webp)no-repeat center center;}
+}

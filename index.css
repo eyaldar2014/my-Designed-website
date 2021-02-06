@@ -1,0 +1,789 @@
+*{
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  body{
+    /* background-color: var(--blue-color); */
+  }
+  
+  /* section */
+  
+  /* colors primary secondary dark light */
+  /* varibles - root */
+  :root{
+    --red-color: #E27D60;
+    --blue-color: #85CDCA;
+    --green-color: #41B3A3;
+    --orange-color: #e8a87c;
+    --purpule-color: #c38d9e;
+    --cream-color: #feffff;
+  }
+
+/* background-colors */
+
+  .color-bg{
+    background-color: var(--red-color);
+  }
+  .color-bg1{
+    background-color: var(--green-color);
+    z-index: -1;
+  }  
+  .color-bg2{
+    background-color: black;
+    z-index: -1;
+  }
+  .color-bg3{
+    background-color: var(--purpule-color);
+    z-index: -1;
+  }
+  /* fonts 15-25px , sans serif font-size*/
+  @font-face {
+    font-family: portal;
+    src: url(/fonts/portal/1/Arizonia-Regular.ttf);
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: portal2;
+    src: url(/fonts/portal/2/HerrVonMuellerhoff-Regular.ttf);
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: normaly;
+    src: url(/fonts/text/normal/DancingScript-VariableFont_wght.ttf);
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: big;
+    src: url(//fonts/text/bigger/Cookie-Regular.ttf);
+    font-weight: 400;
+  }
+  
+  
+  /* p, h1, h2, h3, h4, h5, h6 */
+  p, h4, h5, h6{
+    font-family: normaly;
+    size: 2rem;
+  }
+  
+  h1, h2, h3{
+    font-family: portal;
+    size: 10rem;
+  }
+  /* ------------------------------------------------------------------------------------------------------------------------------------ */
+  
+  
+  #portal{
+    height: 100vh;
+    position: relative;
+  }
+  
+  .portal-bg{
+    background: url(/images/portal/portal.jpg)no-repeat center center/cover;
+    height: 100vh;
+    width: 90%;
+    position: absolute;
+    left: calc(50% - 45vw) ;
+    top: 0;
+  }
+  
+  #portal .portal-container{
+    position: absolute;
+    height: 80vh;
+    width: 42vw;
+    left: calc(50% - 21vw) ;
+    top: 27%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--cream-color);
+  }
+  
+  #portal .portal-box{
+    display: flex;
+  }
+  
+  #portal .portal-container .logo{
+    background: url(/images/portal/logo.jpg)no-repeat center center/cover;
+    z-index: 1;
+    width: 50px;
+    height: 100px;
+    margin-left: 30px;
+    margin-top: -20px;
+  }
+  
+  #portal .portal-container h1{
+    font-family: portal;
+    font-size: 15rem;
+  }
+  
+  #portal .portal-container h2{
+    font-family: portal;
+    font-size: 3rem;
+  }
+  
+  .portal-btn a{
+    color: var(--cream-color);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .portal-btn a:hover{
+    text-decoration: underline;
+  }
+
+
+
+  /* ------------------------------------------------------------------------------------------------------------------------------------ */
+  #main{
+    height: 100vh;
+    position: relative;
+  }
+  
+  .main-bg{
+    height: 100vh;
+    width: 90%;
+    left: calc(50% - 45vw) ;
+    top: 0;
+  }
+
+
+  /* navbar */
+  .navbar{
+    display: grid;
+    grid-template-columns: repeat(17, auto);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--purpule-color);
+  }
+
+  .navbar-logo{
+    background: url(/images/portal/logo.jpg)no-repeat center center/cover;
+    z-index: 1;
+    width: 50px;
+    height: 100px;
+    grid-column: 1 /span 1;
+    position: relative;
+  }
+
+  .navbar-logo:before{
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 300px;
+    height: 600px;
+    background: url(/images/portal/logo.jpg)no-repeat center center/cover;
+    z-index: 3;
+    display: none;
+  }
+
+  .navbar-logo:hover:before{
+    display: inline;
+  }
+
+  .navbar h3{
+    font-family: portal2;
+    font-size: 2.5rem;
+    grid-column: 2 /span 4;
+  }
+
+  .navbar ul{
+    grid-column: 10 /span 7;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 2.5rem;
+    font-family: portal2;
+  }
+
+  .current{
+    font-size: 3.5rem;
+    font-weight: 500;
+  }
+
+  .navbar ul li{
+    margin: auto 0;
+  }
+
+  .navbar ul li a{
+    color: var(--cream-color);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #main .main-container{
+    height: calc(100vh - 100px);
+    width: 90vw;
+    color: var(--cream-color);
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  #main .main-container .main-picture{
+    background: url(/images/main/house/home-sims-gallery-4.jpg) no-repeat center center/cover;
+    height: 60vh;
+    grid-column: 1/span 3;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  #main .main-container .main-picture h1{
+    z-index: 3;
+    font-size: 2.5rem;
+    font-family: portal;
+    font-weight: 900;
+    padding: 20px;
+    background: rgba(46, 141, 165, 0.5);
+  }
+
+  #main .main-container .card-1{
+    background: url(/images/main/house/tiny-house-stuff-4.png) no-repeat center center/cover;
+    height: calc(40vh - 100px);
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+  }
+
+  #main .main-container .card-2{
+    background: url(/images/main/house/loft-apartment-sims-4.jpg.webp) no-repeat center center/cover;
+    height: calc(40vh - 100px);
+    grid-column: 2/span 1;
+    grid-row: 2/span 1;
+  }
+
+  #main .main-container .card-3{
+    background: url(/images/main/house/the-sims-4.jpg) no-repeat center center/cover;
+    height: calc(40vh - 100px);
+    grid-column: 3/span 1;
+    grid-row: 2/span 1;
+  }
+
+  #main .dolphin{
+    position: absolute;
+    right: -4.5vw;
+    top: 28vh;
+    width: 4vw;
+    height: 4vw;
+    background: url(/images/dolphin-icon.png) no-repeat center center/cover;
+    z-index: 2;
+    animation: swimming 6s linear infinite;
+  }
+
+  @keyframes swimming{
+    50% {
+      transform: translateY(500%)
+    }
+  }
+
+
+  /* ------------------------------------------------------------------------------------------------------------------------------------ */
+  
+  #music{
+    height: 100vh;
+    position: relative;
+  }
+
+  #music .music-bg{
+    background: url(/images/music/violin/img-stradivari-violin-product-page-00-welcome-d38ab81d8728d28c6314ee1a3aad915b.png) no-repeat center center/cover;
+    width: 100%;
+    height: calc(100vh - 100px);
+    position: absolute;
+  }
+
+  #music .main-container-music .audio{
+    position: absolute;
+    z-index: 1;
+    top: 90vh;
+    left: calc(45vw - 150px);
+  }
+
+  #music .main-container-music .quote-1{
+    position: absolute;
+    z-index: 3;
+    color: var(--cream-color);
+    top: 20vh;
+    left: 5vw;
+    font-size: 1.8rem;
+  }
+
+  #music .main-container-music .quote-2{
+    position: absolute;
+    z-index: 3;
+    color: var(--cream-color);
+    top: 20vh;
+    right: 5vw;
+    font-size: 1.8rem;
+  }
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+  #ranch{
+    height: 100vh;
+    position: relative;
+    background: var(--red-color);
+  }
+
+  #ranch .ranch-bg{
+    background: url(/images/ranch/horses/how-to-draw-a-horse-head-4.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: calc(100vh - 100px);
+    position: absolute;
+  }
+
+  #ranch .main-container-ranch .ranch-album{
+    position: absolute;
+    top: 88vh;
+    left: calc(45vw - 44%);
+    width: 88%;
+    display: grid;
+    grid-template-columns: repeat(232, auto);
+    grid-column-gap: 0.32vw;
+  }
+
+  .img{
+    height: 8vh;
+    opacity: 0.7;
+  }
+
+  /* album */
+  .item-1{
+    grid-column: 1 /span 13;
+    background: url(/images/ranch/horses/1.jpg) no-repeat center center/cover;;
+  }
+
+  .item-2{
+    grid-column: 14 /span 14;
+    background: url(/images/ranch/horses/2.jpg) no-repeat center center/cover;;
+  }
+
+  .item-3{
+    grid-column: 28 /span 15;
+    background: url(/images/ranch/horses/3.webp)  no-repeat center center/cover;;
+  }
+
+  .item-4{
+    grid-column: 43 /span 16;
+    background: url(/images/ranch/horses/52f57866d26284efba825e8f01780034.jpg) no-repeat center center/cover;;
+  }
+
+  .item-5{
+    grid-column: 59 /span 17;
+    background: url(/images/ranch/horses/GettyImages-953095178.jpg.webp) no-repeat center center/cover;;
+  }
+
+  .item-6{
+    grid-column: 76 /span 18;
+    background: url(/images/ranch/horses/Horse_Divorce_Advice.jpg) no-repeat center center/cover;;
+  }
+
+  .item-7{
+    grid-column: 94 /span 19;
+    background: url(/images/ranch/horses/horses-asthma-e1555444466282.jpg) no-repeat center center/cover;;
+  }
+
+  .item-8{
+    grid-column: 113 /span 20;
+    background: url(/images/ranch/horses/how-to-draw-a-horse-head-4.jpg) no-repeat center center/cover;;
+  }
+
+  .item-9{
+    grid-column: 133 /span 19;
+    background: url(/images/ranch/horses/ie_31600.jpeg) no-repeat center center/cover;;
+  }
+
+  .item-10{
+    grid-column: 152 /span 18;
+    background: url(/images/ranch/horses/3118110b17b71a358f405b9114045be6.jpg) no-repeat center center/cover;;
+  }
+
+  .item-11{
+    grid-column: 170 /span 17;
+    background: url(/images/ranch/horses/14577_raychenandhorses_968999.jpg) no-repeat center center/cover;;
+  }
+
+  .item-12{
+    grid-column: 187 /span 16;
+    background: url(/images/ranch/horses/iStock-510488648.jpg) no-repeat center center/cover;;
+  }
+
+  .item-13{
+    grid-column: 203 /span 15;
+    background: url(/images/ranch/horses/merlin_166503492_2798a4db-be43-4a90-bd89-ef9437962b36-superJumbo.jpg) no-repeat center center/cover;;
+  }
+
+  .item-14{
+    grid-column: 218 /span 14;
+    background: url(/images/ranch/horses/u-g-PZKPG00.jpg) no-repeat center center/cover;;
+  }
+
+  .item-15{
+    grid-column: 232 /span 13;
+    background: url(/images/ranch/horses/Unknown.jpg) no-repeat center center/cover;;
+  }
+
+  .item-15:before{
+    position: absolute;
+    background: url(/images/ranch/horses/Unknown.jpg) no-repeat center center/cover;
+    z-index: 3;
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+
+  .item-15:hover{
+    opacity: 1;
+  }
+  .item-15:hover::before{
+    content: '';
+  }
+
+  .item-14:before{
+    position: absolute;
+    background: url(/images/ranch/horses/u-g-PZKPG00.jpg) no-repeat center center/cover;;
+    z-index: 3;
+    top: calc(-88vh + 100px);
+    left: 30%;
+    width: 40%;
+    height: calc(88vh - 100px);
+  }
+  .item-14:after{
+    position: absolute;
+    background-color: var(--red-color);
+    z-index: 2;
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+  .item-14:hover{
+    opacity: 1;
+  }
+  .item-14:hover::before,
+  .item-14:hover::after{
+    content: '';
+  }
+
+
+  .item-13:before{
+    position: absolute;
+    background: url(/images/ranch/horses/merlin_166503492_2798a4db-be43-4a90-bd89-ef9437962b36-superJumbo.jpg) no-repeat center center/cover;;
+    z-index: 3;
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+
+  .item-13:hover{
+    opacity: 1;
+  }
+  .item-13:hover::before{
+    content: '';
+  }
+
+  .item-12:before{
+    position: absolute;
+    background: url(/images/ranch/horses/iStock-510488648.jpg) no-repeat center center/cover;;
+    z-index: 3;
+    top: calc(-88vh + 100px);
+    left: 20%;
+    width: 60%;
+    height: calc(88vh - 100px);
+  }
+
+  .item-12:after{
+    position: absolute;
+    background-color: var(--red-color);
+    z-index: 2;
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+
+  .item-12:hover{
+    opacity: 1;
+  }
+  .item-12:hover::before,
+  .item-12:hover::after{
+    content: '';
+  }
+
+  .item-11:before{
+    position: absolute;
+    background: url(/images/ranch/horses/14577_raychenandhorses_968999.jpg) no-repeat center center/cover;;
+    z-index: 3;
+    top: calc(-78vh + 100px);
+    left: 20%;
+    width: 60%;
+    height: 50vh;
+  }
+  .item-11:after{
+    position: absolute;
+    background-color: var(--red-color);
+    z-index: 2;
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+
+
+  .item-11:hover{
+    opacity: 1;
+  }
+  .item-11:hover::before,
+  .item-11:hover::after{
+    content: '';
+  }
+
+  .item-10:before{
+    position: absolute;
+    background: url(/images/ranch/horses/3118110b17b71a358f405b9114045be6.jpg) no-repeat center center/cover;;
+    z-index: 3;
+    top: calc(-78vh + 100px);
+    left: 20%;
+    width: 60%;
+    height: 50vh;
+  }
+  .item-10:after{
+    position: absolute;
+    background-color: var(--red-color);
+    z-index: 2;
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+
+  .item-10:hover{
+    opacity: 1;
+  }
+  .item-10:hover::before,
+  .item-10:hover::after{
+    content: '';
+  }
+
+  .item-9:before{
+    position: absolute;
+    background: url(/images/ranch/horses/ie_31600.jpeg) no-repeat center center/cover;;
+    z-index: 3;
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+
+  .item-9:hover{
+    opacity: 1;
+  }
+  .item-9:hover::before{
+    content: '';
+  }
+
+
+  .item-7:before{
+    position: absolute;
+    background: url(/images/ranch/horses/horses-asthma-e1555444466282.jpg) no-repeat center center/cover;;
+    z-index: 3;
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+
+  .item-7:hover{
+    opacity: 1;
+  }
+  .item-7:hover::before{
+    content: '';
+  }
+
+  .item-6:before{
+    position: absolute;
+    background: url(/images/ranch/horses/Horse_Divorce_Advice.jpg) no-repeat center center/cover;
+    z-index: 3;
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+
+  .item-6:hover{
+    opacity: 1;
+  }
+  .item-6:hover::before{
+    content: '';
+  }
+
+  .item-5:before{
+    position: absolute;
+    background: url(/images/ranch/horses/GettyImages-953095178.jpg.webp) no-repeat center center/cover;
+    z-index: 3;
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+
+  .item-5:hover{
+    opacity: 1;
+  }
+  .item-5:hover::before{
+    content: '';
+  }
+
+  .item-4:before{
+    position: absolute;
+    background: url(/images/ranch/horses/52f57866d26284efba825e8f01780034.jpg) no-repeat center center/cover;
+    z-index: 3;
+    top: calc(-88vh + 100px);
+    left: 30%;
+    width: 40%;
+    height: calc(88vh - 100px);
+  }
+
+  .item-4:after{
+    position: absolute;
+    background-color: var(--red-color);
+    z-index: 2;
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+
+  .item-4:hover{
+    opacity: 1;
+  }
+  .item-4:hover::before,
+  .item-4:hover::after{
+    content: '';
+  }
+
+  .item-3:before{
+    position: absolute;
+    background: url(/images/ranch/horses/3.webp) no-repeat center center/cover;
+    z-index: 3;
+    top: calc(-88vh + 100px);
+    left: 20%;
+    width: 60%;
+    height: calc(88vh - 100px);
+  }
+  .item-3:after{
+    position: absolute;
+    background-color: var(--red-color);
+    z-index: 2;
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+  .item-3:hover{
+    opacity: 1;
+  }
+  .item-3:hover::before,
+  .item-3:hover::after{
+    content: '';
+  }
+
+
+
+  .item-2:before{
+    position: absolute;
+    background: url(/images/ranch/horses/2.jpg) no-repeat center center/cover;
+    z-index: 3;
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+
+  .item-2:hover{
+    opacity: 1;
+  }
+  .item-2:hover::before{
+    content: '';
+  }
+
+  .item-1:before{
+    position: absolute;
+    background: url(/images/ranch/horses/1.jpg) no-repeat center center/cover;
+    z-index: 3;
+    top: calc(-88vh + 100px);
+    left: 0;
+    width: 100%;
+    height: calc(88vh - 100px);
+  }
+
+  .item-1:hover{
+    opacity: 1;
+  }
+  .item-1:hover::before{
+    content: '';
+  }
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+#relax{
+  height: 100vh;
+  background: black;
+  position: relative;
+}
+.relax{
+  height: 100vh;
+  background: url(/images/464.jpg)no-repeat center center;
+  animation: bg 100s linear infinite;
+}
+
+@keyframes bg {
+  10%{ background: url(/images/world/earth/2czdk0000f41000.jpeg)no-repeat center center;}
+  20%{ background: url(/images/world/earth/africa.jpg)no-repeat center center;}
+  30%{ background: url(/images/world/earth/DF-Promo_View.jpg8843d058-7403-4cd7-a1a7-a127c31d0bb2Original.jpg)no-repeat center center;}
+  40%{ background: url(/images/world/earth/file-20191218-11891-rdedzs.jpg.webp)no-repeat center center;}
+  50%{ background: url(/images/world/earth/GettyImages-966223936-1651cc0ded784ff2bac31e1c8f835a6f.jpg)no-repeat center center;}
+  60%{ background: url(/images/1.jpg)no-repeat center center;}
+  70%{ background: url(/images/world/earth/New-global-view.max-1000x1000.jpeg.png)no-repeat center center;}
+  80%{ background: url(/images/world/earth/satellite-map-of-the-world_wm00875.jpg)no-repeat center center;}
+  90%{ background: url(/images/world/earth/Science_nightsky_462555821.jpg.webp)no-repeat center center;}
+}
+
+.relax-1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: transparent;
+  color: var(--cream-color);
+}
+
+.exit{
+  position: absolute;
+  top: 0;
+  left: 5vw;
+  height: 100%;
+  background: transparent;
+  color: var(--cream-color);
+}
+
+.exit h1{
+  z-index: 1;
+  width: 90vw;
+  height: 100%;
+}
+
+.exit a{
+  color: var(--cream-color);
+  text-decoration: none;
+}
